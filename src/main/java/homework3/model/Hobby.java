@@ -8,7 +8,7 @@ import java.util.List;
 public class Hobby {
     private String name;
     private int frequency;
-    private List<Address> listOfAddresses =  new ArrayList<>();
+    private List<Address> listOfAddresses = new ArrayList<>();
 
     public Hobby(String name, int frequency, List<Address> listOfAddresses) {
         this.name = name;

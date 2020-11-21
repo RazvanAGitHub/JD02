@@ -1,9 +1,6 @@
 package homework3.mainApplication;
 
-import homework3.model.Employee;
-import homework3.model.Hobby;
-import homework3.model.Person;
-import homework3.model.Student;
+import homework3.model.*;
 import homework3.location.Address;
 import homework3.location.Continent;
 import homework3.location.Country;
@@ -19,7 +16,7 @@ public class Main {
         Person p2 = new Student("Ana", "Pop", 18, "UTCN");
         Person p3 = new Employee("Marius", "Benaru", 40, "MSG", 5000);
 
-        /*
+
         System.out.println("************************** Requirement 1 **************************");
         List<Person> listOfPersons = new ArrayList<>();
         listOfPersons.add(p1);
@@ -49,22 +46,22 @@ public class Main {
         for (Person person : personsOrderdByAge) {
             System.out.println(person);
         }
-        */
+
         System.out.println();
         System.out.println("************************** Requirement 2 **************************");
         Country australia = new Country("Australia", Continent.AUSTRALIA);
         Country usa = new Country("USA", Continent.AMERICA_NORTH);
-        Country italy = new Country ("Italy", Continent.EUROPE);
+        Country italy = new Country("Italy", Continent.EUROPE);
         Country austria = new Country("Austria", Continent.EUROPE);
 
         Address surfingFirstAdress = new Address(australia, "Melbourne");
-        Address surfingSecondAdress =  new Address(usa, "Miamai");
+        Address surfingSecondAdress = new Address(usa, "Miamai");
         Address skiingFirstAdress = new Address(italy, "Valgardena");
-        Address skiingSecondAdress =  new Address(austria, "Ischgl");
+        Address skiingSecondAdress = new Address(austria, "Ischgl");
 
         Address cyclingFirstAdress = surfingFirstAdress;
-        Address cyclingSecondAdress =  surfingSecondAdress;
-        Address cyclingThirdAdress =  skiingFirstAdress;
+        Address cyclingSecondAdress = surfingSecondAdress;
+        Address cyclingThirdAdress = skiingFirstAdress;
 
         List<Address> surfingAddresses = new ArrayList<>();
         surfingAddresses.add(surfingFirstAdress);
@@ -110,7 +107,7 @@ public class Main {
             System.out.println("Person " + person + " has following hobbies: ");
             for (Hobby hobby : personsWithHobbies.get(person)) {
                 System.out.println("  * " + hobby.getName() + ", in countries: ");
-                for (Address address :  hobby.getListOfAddresses()) {
+                for (Address address : hobby.getListOfAddresses()) {
                     System.out.println("      " + address.getCountry());
                 }
             }
